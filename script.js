@@ -21,8 +21,32 @@ const map = new mapboxgl.Map({
 Step 2: VIEW GEOJSON POINT DATA ON MAP
 --------------------------------------------------------------------*/
 //HINT: Create an empty variable
+fetch("https://github.com/smith-lg/ggr472-lab4/blob/f8205321fb8cdc020c628e527c9dcd13ca28918b/data/pedcyc_collision_06-21.geojson")
+
 //      Use the fetch method to access the GeoJSON from your online repository
+.then(response => response.json())
+    .then(data => {
+        // Add the fetched data as a source
+        map.addSource('fetched-data', {
+            type: 'geojson',
+            data: data
+            });
+        })
 //      Convert the response to JSON format and then store the response in your new variable
+map.on('load', function () {
+    map.addLayer({
+        id: 'fetched-layer',
+        type: 'circle', // You can use 'fill', 'line', 'symbol', etc.
+        source: {
+            type: 'geojson',
+            data: 'https://github.com/smith-lg/ggr472-lab4/blob/f8205321fb8cdc020c628e527c9dcd13ca28918b/data/pedcyc_collision_06-21.geojson'
+        },
+        paint: {
+            'circle-radius': 6,
+            'circle-color': '#FF5733'
+        }
+    });
+});
 
 
 
