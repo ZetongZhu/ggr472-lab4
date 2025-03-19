@@ -6,3 +6,36 @@
     right: 0;
     width: 100%;
 }
+
+/* Move layer control styling here */
+#layer-control {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: white;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Style for legend */
+#legend {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    .legend-color {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+        vertical-align: middle;
+        border: 1px solid #000;
+    }
+}

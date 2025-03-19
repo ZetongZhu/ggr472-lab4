@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GGR472 Lab 4</title>
-    <!-- mapbox API -->
+    <!-- Mapbox API -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.css' rel='stylesheet' />
-    <!-- CSS -->
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- Turf.js -->
     <script src='https://unpkg.com/@turf/turf@7.2.0/turf.min.js'></script>
@@ -20,6 +20,15 @@
     <!-- MAP CONTAINER -->
     <div id='map' class='map'></div>
 
+    <!-- LAYER CONTROL -->
+    <div id="layer-control">
+        <label>
+            <input type="checkbox" id="toggle-hexgrid" checked>
+            Show Hex-Grid
+        </label>
+    </div>
+
+    <!-- External JS -->
     <script src="script.js"></script>
 
 </body>
